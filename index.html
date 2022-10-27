@@ -58,7 +58,8 @@
             <ul>
                 <li v-for="(item,index) in tasksList"> 
                     <span :class="{ check : item.done }" @click="checkElement(index)">{{ item.task }}</span>
-                    <span @click="taskCompleted(index)">&cross;</span>
+                    <span @click="taskCompleted(index)" class="" style="color: green">&check;</span>
+                    <span @click="taskCompleted(index)" style="color: red">&cross;</span>
                 </li>
             </ul>
         </div>

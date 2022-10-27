@@ -61,7 +61,7 @@ display: none;
     cursor: pointer;
 }
 
-.box input: focus-visible{
+.box input focus-visible{
     border: 1px solid brown;
 }
 
