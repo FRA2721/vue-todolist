@@ -60,8 +60,8 @@
                     <span :class="{ check : item.done }" @click="taskDone(index)">{{ item.task }}</span>
 
                     <div class="simbols">
-                        <span v-if="item.done" class="check" style="color: green">&check;</span>
-                        <span v-else class="cancel" @click="crossedTasks(index)" style="color: red">&cross;</span>
+                        <span v-if="item.done" class="check" style="color: green">&check;</span> <!--when element is checked-->
+                        <span v-else class="canceled" @click="crossedTasks(index)" style="color: red">&cross;</span> <!-- when the element is canceled -->
                     </div>
                 </li>
             </ul>
