@@ -41,6 +41,12 @@
                 <input type="text" id="input-task" v-model="inputTask" placeholder="New Task" @keyup.enter="enterNewTask">
                 <button @click="enterNewTask">Add new task</button>
 
+                <!-- minimum-chars -->
+                <div class="error-message" :class="validator ? 'none':'block'">
+                    <small>{{errorMessagge}}</small>
+                </div>
+                <!-- /minimum-chars -->
+
             </div>
             <!-- /check-box-to-do-list-task -->
 

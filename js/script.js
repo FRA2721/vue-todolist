@@ -57,6 +57,11 @@ createApp({
                 this.validator = true;    
             }
 
+              else if (this.inputTask.length < 5) {
+              this.validator = false;  
+              this.errorMessagge = "Enter minimun 5 characters please..."
+            }
+
             else if (activities.includes(this.inputTask.toLowerCase())) {
                 this.validator = false;  
                 this.errorMessagge = "This task is in your list..."
