@@ -1,5 +1,5 @@
 <!-- dev: Francesco Cimino; -->
-<!-- proj: Vue To Do List; -->
+<!-- proj: Vue To tasksList; -->
 <!-- lang: html; -->
 
 <!DOCTYPE html>
@@ -26,6 +26,40 @@
 <!-- body -->
 <body>
     
+    <div id="root" class="container">
+
+        <!-- header-section -->
+        <header>
+            <div class="logo">
+                <img src="img/booleanLogo.png" alt="boolean logo image">
+                <h1>Boolean to-do list</h1>
+            </div>
+
+            <!-- check-box-to-do-list-task -->
+            <div class="box">
+                <label for="input-task"></label>
+                <input type="text" id="input-task" v-model="inputTask" placeholder="New Task" @keyup.enter="enterNewTask">
+                <button @click="enterNewTask">Add new task</button>
+
+            </div>
+            <!-- /check-box-to-do-list-task -->
+
+        </header>
+        <!-- /header-section -->
+
+        <!-- tasks-container -->
+        <div class="tasks-container">
+            <ul>
+                <li v-for="(item,index) in tasksList"> 
+                    <span :class="{check:item.done}" @click="checkElement(index)">{{item.text}}</span>
+                    <span @click="taskCompleted(index)">&cross;</span>
+                </li>
+            </ul>
+        </div>
+        <!-- /tasks-container -->
+        
+    </div>
+
     <!-- js -->
     <script src="js/script.js"></script>
     <!-- /js -->
