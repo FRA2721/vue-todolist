@@ -71,17 +71,14 @@ createApp({
         },
 
         // task-completed
-        taskCompleted : function(index) {
-        this.tasksList.splice(index , 1);
+        //change the status of done key from the object inside tasksList
+        taskDone(index) {
+        this.tasksList[index].done = !this.tasksList[index].done
         },
-
-        taskNCompleted : function(contentText) {
-             this.tasksList = this.tasksList.filter(item=> item.task !== contentText);
-        },
-
-        // check-tasks
-        checkElement : function(index){
-            this.tasksList[index].done = !this.tasksList[index].done;
+        
+        //remove the object from tasksList in the clicked item index
+        crossedTasks(index) {
+            this.tasksList.splice([index], 1)
         }
     
     }

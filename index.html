@@ -57,9 +57,12 @@
         <div class="tasks-container">
             <ul>
                 <li v-for="(item,index) in tasksList"> 
-                    <span :class="{ check : item.done }" @click="checkElement(index)">{{ item.task }}</span>
-                    <span @click="taskCompleted(index)" class="" style="color: green">&check;</span>
-                    <span @click="taskCompleted(index)" style="color: red">&cross;</span>
+                    <span :class="{ check : item.done }" @click="taskDone(index)">{{ item.task }}</span>
+
+                    <div class="simbols">
+                        <span v-if="item.done" class="check" style="color: green">&check;</span>
+                        <span v-else class="cancel" @click="crossedTasks(index)" style="color: red">&cross;</span>
+                    </div>
                 </li>
             </ul>
         </div>
