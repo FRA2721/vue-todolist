@@ -1,4 +1,106 @@
-/* dev: Francesco Cimino; */
-/* proj: Vue To Do List; */
-/* lang: css; */
+/* dev:  Francesco Cimino; */
+/* proj:  Vue To Do List; */
+/* lang:  css; */
 
+/* reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:  border-box;
+}
+
+
+
+/* container-formatting-section */
+.container,.tasks-container{
+    width: 900px;
+    margin: 0 auto;
+}
+
+.tasks-container{
+    width: 450px;
+    margin-top: 1.5rem;
+    border: 1px solid black;
+    border-radius: 33px;
+    background-color:  burlywood;
+}
+
+
+
+/* header */
+header{
+    text-align: center;
+}
+
+
+
+/* logo-formatting */
+.logo{
+    display: flex;
+    justify-content:  center;
+    align-items:  center;
+    padding: 2rem 0;
+}
+
+/* h1 */
+.logo h1{
+    margin-left: 0.5em;
+}
+
+
+
+/* task-box-formatting-section */
+.box label {
+display: none;
+}
+
+.box input,.box button{
+    padding: 1rem 2rem;
+    border-radius: 33px;
+    border: 1px solid brown;
+    cursor: pointer;
+}
+
+.box input: focus-visible{
+    border: 1px solid brown;
+}
+
+
+ul{
+    list-style:  none;
+    padding: 1.5em 0.5em;
+}
+
+li{
+    margin-bottom: 15px;
+    border-bottom:  1px solid black;
+    display: flex;
+    justify-content:  space-between;
+}
+
+
+
+/* error-message */
+.error-message{
+    color: red;
+}
+
+
+
+/* display-formatting-section */
+.none{
+    display: none;
+}
+
+.block{
+    display: block;
+}
+
+li span{
+    cursor:  pointer;
+}
+
+/* check */
+.check{
+    text-decoration:  line-through;
+}

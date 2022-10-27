@@ -43,7 +43,7 @@
 
                 <!-- minimum-chars -->
                 <div class="error-message" :class="validator ? 'none':'block'">
-                    <small>{{errorMessagge}}</small>
+                    <small>{{ errorMessagge }}</small>
                 </div>
                 <!-- /minimum-chars -->
 
@@ -57,7 +57,7 @@
         <div class="tasks-container">
             <ul>
                 <li v-for="(item,index) in tasksList"> 
-                    <span :class="{check:item.done}" @click="checkElement(index)">{{item.text}}</span>
+                    <span :class="{ check : item.done }" @click="checkElement(index)">{{ item.task }}</span>
                     <span @click="taskCompleted(index)">&cross;</span>
                 </li>
             </ul>
